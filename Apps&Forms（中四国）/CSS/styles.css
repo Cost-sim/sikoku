@@ -1,0 +1,136 @@
+
+body {
+  background: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-image: url(../BG_グラデ.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+h1{
+  font-size: 16px;
+  font-weight: bold;
+  text-align:start;
+  color:#0e71f3
+}
+
+.info  {
+  font-size: 18px;
+  text-align:center;
+  font-weight: bold;
+  display: flex;
+  justify-content: -evenly;
+  align-items:flex-start;
+  color: #f8f8f8;
+}
+.info2{
+  font-size: 15px;
+  text-align: end;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+.radio{
+  width: 100%;
+
+}
+.container {
+  width: 100%;
+  margin: 20px auto;
+
+}
+#radio1,
+#radio2{
+cursor: pointer;
+margin: 10px;
+
+}
+
+#price
+ {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  width: 90px;
+}
+
+#num
+ {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  width: 120px;
+}
+
+
+#btn{
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 99%;
+  height: 40px;
+  padding: 10px 10px 10px 10px;
+  background: #3897fd;
+  border-radius:5px ;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin: 10px auto ;
+}
+
+.input-area{
+  font-size: 0;
+  margin-bottom: 20px;
+  
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  -moz-appearance:textfield; 
+} 
+
+.result-area{
+  background: #f8f8f8;
+  padding: 10px;
+  height: 130px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 50px;
+ width: 92%;
+  font-size: 22px;
+  
+}
+
+#result{
+  margin: 0;
+}
+#result2{
+  
+  font-size: 25px;
+  margin-top: 5px;
+  color: crimson;
+}
+
+#reset{
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#btn.disabled{
+  opacity: 0.5;
+}
+#reset.hidden{
+  display: none;
+}

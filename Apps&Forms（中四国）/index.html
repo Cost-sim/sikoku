@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <head>
+    <!-- ヘッダー -->
+    <title>コストシミュレーション</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="form.css">
+    <!-- タップして画像拡大（いじらない＆ヘッダータグに） -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+
+    <!-- シミュレーション -->
+    <div id="box">
+      
+      <legend class="info"><img src="calc.png" width="36px" height="42px"/> &nbsp;料金シミュレーション
+
+      </legend><br>
+      <div class="radio">
+        <h1>①　以下よりご使用のキットに<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;近いものを選択して下さい</h1>
+        <div>
+          <input type="radio" name="kit" id="radio1" value="3000">
+          <a href="kit_A.png" data-lightbox="group"> 白内障キットA<img src="kit_A.png" width="230"></a>
+         
+        </div>
+        <div>
+          <input type="radio" name="kit" id="radio2"value="8000"> <a href="kit_B.png" data-lightbox="group"> 白内障キットB<img src="kit_B.png" width="230"></a>
+        </div>
+      
+        
+      </div>
+      <div class="container">
+        <div class="input-area">
+          <h1>②　現在の納入金額と<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年間使用数をご入力下さい</h1>
+          <input type="number" id="price"  pattern=”\d*” placeholder="納入金額">
+          <input type="number" id="num" pattern=”\d*” placeholder="年間のご使用数">
+          
+          <h1>③　計算ボタンを押して<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;結果をご確認頂けます</h1>
+          <div id="btn" class="disabled">計算</div>
+        </div>
+        <div class="result-area">
+          <p id="result">ここに結果を表示します</p>
+          <p id="result2"></p>
+          <div id="reset" class="hidden"></div>
+        </div>
+      </div>
+    </div>
+      
+    <script src="JS/main.js"></script>
+    <!-- //問合せフォーム   -->
+    <div id="formm"> 
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVoAnZXk-qW5c0Jdt76Hg70kGzRYUqqDi59B74T2720snXPA/formResponse" target="_self" method="POST" id="mG61Hd">
+  
+        <ul>
+          <li class="info"><img src="mail.png" width="36px" height="27px">&nbsp;&nbsp;お問合せフォームから</li>
+          <li class="info2">もしくはお電話下さい<br>TEL：087-881-8001
+          </li>
+          <li>
+            施設名
+            <input name="entry.1653872762" type="text" required="required" id="textfield" class="g_form" placeholder="施設名">
+          </li>
+          <li>
+            <label for="textfield2">お名前</label>
+            <input name="entry.400825443"type="text" required="required" class="g_form" id="textfield2" placeholder="お名前">
+          </li>
+          <li>
+            <label for="textfield3">メールアドレス</label>
+            <input name="entry.559715713" type="text" required="required" class="g_form" id="textfield3" placeholder="メールアドレス">
+          </li>
+          <li>
+            <label for="textfield4">電話</label>
+            <input name="entry.37678010" type="text" class="g_form" id="textfield4"placeholder="電話番号">
+          </li>
+          <li><legend>ご使用のキット</legend></li>
+         <li>
+          <div>
+            <input name="entry.1062445803" type="radio" required="required" class="radio_g" id="radio1" value="白内障キットA"><label for="radio1">白内障キットA</label>
+          </div> 
+          <div>
+            <input name="entry.1062445803" type="radio" required="required" class="radio_g" id="radio2" value="白内障キットB"><label for="radio2">白内障キットB</label>
+          </div>
+          
+          </li>
+          
+          <li>
+            <label for="textfield5">購入金額</label>
+            <input name="entry.1759657974" type="text" required="required" class="g_form" id="textfield5" placeholder="購入金額">
+          </li>
+          <li>
+            <label for="textfield6">年間のご使用数</label>
+            <input name="entry.193072250" type="text" required="required" class="g_form" id="textfield6"  placeholder="年間のご使用数">
+          </li>
+          <li>その他お問い合わせ等<textarea name="entry.1315024922"  class="g_form_text" id="entry.952897594"
+            placeholder="その他お問い合わせ"></textarea>
+        </li>
+        <li><input type="submit" class="btbt"></li>
+        </ul>
+      
+      </form>
+      </div>
+  </body>
+    </html>
