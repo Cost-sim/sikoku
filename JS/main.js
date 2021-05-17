@@ -6,6 +6,7 @@ let num = document.getElementById('num');
 let btn = document.getElementById('btn');
 let result = document.getElementById('result');
 let result2 = document.getElementById('result2');
+let result3 = document.getElementById('result3');
 let reset = document.getElementById('reset');
 const kits = document.querySelectorAll("div.radio input[name='kit']");
 const op_few=200
@@ -52,8 +53,9 @@ const op_many=1000
         }else{
           result.textContent='コスト削減額は' ;
           setTimeout(()=>{
-            result2.textContent=str.toLocaleString() +' 円です';
+            result2.textContent=str.toLocaleString() +' 円です ';
           },500);
+          result3.textContent="詳しいお見積りは下記フォームよりお問合せ下さい";
         }
         reset.classList.remove('hidden');
         document.getElementById("textfield5").value=price.value //フォームに納入金額を代入
