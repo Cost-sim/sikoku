@@ -9,9 +9,8 @@ let result2 = document.getElementById('result2');
 let result3 = document.getElementById('result3');
 let reset = document.getElementById('reset');
 const kits = document.querySelectorAll("div.radio input[name='kit']");
-const op_few=200
-const op_middle=500
-const op_many=1000
+const op_few=500
+
 
 
 
@@ -38,28 +37,27 @@ const op_many=1000
       if (kit.checked === true) {
       
         selectedKit = kit.value;
-        if(num.value<=op_few){
-          str=(price.value-selectedKit*1)*num.value;//OP200以下の場合:1.5倍の単価
-        }else if(num.value<=op_middle){
-          str=(price.value-selectedKit*1)*num.value;//OP500以下の場合:1.3倍の単価
-        }else{
-          str=(price.value-selectedKit)*num.value;
-          
+        if(num.value<op_few && selectedKit==3000){
+          str=(price.value-selectedKit*1.2)*num.value;//OP500未満かつ、キットAの場合は1.2倍してコスト削減額を表示する
+        }
+        else{
+          str=(price.value-selectedKit)*num.value; //そうでなければコスト削減額を表示する
         }
 
         if(str<1){
           result.textContent="申し訳ございません";
           result2.textContent ="下記フォームよりお問合せ下さい";
+          result3.textContent="";
         }else{
           result.textContent='コスト削減額は' ;
           setTimeout(()=>{
             result2.textContent=str.toLocaleString() +' 円です ';
+            result3.textContent="詳しいお見積りは下記フォームよりお問合せ下さい";
           },500);
-          result3.textContent="詳しいお見積りは下記フォームよりお問合せ下さい";
         }
         reset.classList.remove('hidden');
         document.getElementById("textfield5").value=price.value //フォームに納入金額を代入
-        document.getElementById("textfield6").value=num.value //フォームに納入金額を代入
+        document.getElementById("textfield6").value=num.value //フォームに使用数量を代入
 
         
         // 1秒後にメッセージを表示
@@ -83,6 +81,8 @@ const op_many=1000
       result.textContent = 'ここに結果を表示します';
       price.value = '';
       num.value = '';
+      result3.value='';
+
       // for(i=0;i<3;i++){
         // document.getElementsByName('kit') .checked= false;
       // };
