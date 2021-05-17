@@ -38,9 +38,9 @@ const op_many=1000
       
         selectedKit = kit.value;
         if(num.value<=op_few){
-          str=(price.value-selectedKit*1.5)*num.value;//OP200以下の場合:1.5倍の単価
+          str=(price.value-selectedKit*1)*num.value;//OP200以下の場合:1.5倍の単価
         }else if(num.value<=op_middle){
-          str=(price.value-selectedKit*1.3)*num.value;//OP500以下の場合:1.3倍の単価
+          str=(price.value-selectedKit*1)*num.value;//OP500以下の場合:1.3倍の単価
         }else{
           str=(price.value-selectedKit)*num.value;
           
