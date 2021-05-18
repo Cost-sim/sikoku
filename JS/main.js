@@ -4,6 +4,7 @@
 let price = document.getElementById('price');
 let num = document.getElementById('num');
 let btn = document.getElementById('btn');
+
 let result = document.getElementById('result');
 let result2 = document.getElementById('result2');
 let result3 = document.getElementById('result3');
@@ -26,14 +27,14 @@ const op_few=500
   }
  };
 
-  btn.addEventListener('click', function()  {
+  btn.addEventListener('click', function click()  {
    
     let selectedKit;
     let str;
     let str2;
     
     // ラジオボタンの値を取得
-    kits.forEach(kit => {
+    kits.forEach(function (kit){
       if (kit.checked === true) {
       
         selectedKit = kit.value;
@@ -50,7 +51,7 @@ const op_few=500
           result3.textContent="";
         }else{
           result.textContent='コスト削減額は' ;
-          setTimeout(()=>{
+          setTimeout(function(){
             result2.textContent=str.toLocaleString() +' 円です ';
             result3.textContent="詳しいお見積りは下記フォームよりお問合せ下さい";
           },500);
